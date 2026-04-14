@@ -23,7 +23,7 @@ Adição de nova nota no campo "notas" (Compass)
 # Remoção
 Exclusão de um aluno (Compass)
 
-# Aggregation - média de notas
+# Aggregation 1 - Média de notas por aluno
 {
   $project: {
     nome: 1,
@@ -31,7 +31,7 @@ Exclusão de um aluno (Compass)
   }
 }
 
-# Aggregation - quantidade por curso
+# Aggregation 2 - Quantidade de alunos por curso
 {
   $group: {
     _id: "$curso",
