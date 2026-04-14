@@ -1,0 +1,40 @@
+# Banco criado no MongoDB Atlas (via Compass)
+
+# Criação do banco
+escola
+
+# Criação da collection
+alunos
+
+# Inserção de dados
+Insert Document (5 alunos via interface do Compass)
+
+# Consultas realizadas
+{}
+{ "curso": "ADS" }
+{ "idade": { "$gt": 21 } }
+
+# Atualização
+Edição manual de idade de um aluno (Compass)
+
+# Adição em array
+Adição de nova nota no campo "notas" (Compass)
+
+# Remoção
+Exclusão de um aluno (Compass)
+
+# Aggregation - média de notas
+{
+  $project: {
+    nome: 1,
+    media: { $avg: "$notas" }
+  }
+}
+
+# Aggregation - quantidade por curso
+{
+  $group: {
+    _id: "$curso",
+    quantidade: { $sum: 1 }
+  }
+}
